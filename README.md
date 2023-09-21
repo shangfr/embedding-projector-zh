@@ -56,6 +56,7 @@ Usage: main.py [OPTIONS]
 
 ### Visualising
 在文件夹内打开Shell终端，输入下面命令运行静态服务器，然后打开浏览器。
+
 `python -m http.server 5000` 
 
 ### 👇知识储备
@@ -78,3 +79,7 @@ Usage: main.py [OPTIONS]
 - [Pinecone](https://safjan.com/the-best-vector-databases-for-storing-embeddings/#pinecone)
 - [Supabase](https://safjan.com/the-best-vector-databases-for-storing-embeddings/#supabase)
 
+
+#### SentenceTransformers
+
+word2vec、glove是两种静态的词向量模型，即每个词语只有一个固定的向量表示。但在不同语境中，词语的语义会发生变化，按道理词向量也应该动态调整。相比word2vec、glove生成的静态词向量， BERT、ERNIE是一种动态的技术，可以根据上下文情景，得到语义变化的词向量。HuggingFace网站提供了简易可用的数据集、丰富的预训练语言模型， 通过sentence-transformer库，可以使用预训练模型，得到不同情景的文本的语义向量。

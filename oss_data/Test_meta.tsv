@@ -1,0 +1,4 @@
+sentences	label
+This framework generates embeddings for each input sentence	yes
+Sentences are passed as a list of string.	no
+The quick brown fox jumps over the lazy dog.	yes
