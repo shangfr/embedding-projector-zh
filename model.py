@@ -19,10 +19,10 @@ def mean_pooling(model_output, attention_mask):
 
 
 class EmbPipeline(Pipeline):
-    def __init__(self,model_directory = "model_files",model_name = "model_quantized.onnx"):
+    def __init__(self,model_directory,model_name = "model.onnx"):
         model = ORTModelForFeatureExtraction.from_pretrained(model_directory, file_name=model_name)
         tokenizer = AutoTokenizer.from_pretrained(model_directory)
-        print("Loaded parameters from model_quantized.onnx")
+        print("Loaded parameters from model.onnx")
         super(EmbPipeline, self).__init__(model,tokenizer)
         
     def _sanitize_parameters(self, **kwargs):
